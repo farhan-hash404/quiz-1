@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Form</title>
+    <link rel="stylesheet" href="style.css ">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #adacac;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        body {
+            font-family:monospace;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            animation: fadeInDown 1s ease-out;
+        }
+        .form-group {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+            animation: fadeInLeft 1s ease-out;
+        }
+        input[type="text"], input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #82cf84;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            animation: zoomIn 1s ease-out;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .question {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+            transition: color 0.3s ease;
+            animation: fadeInRight 1s ease-out;
+        }
+        .options input[type="radio"] {
+            margin-right: 5px;
+        }
+        .options input[type="radio"]:checked + label {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .result {
+            text-align: center;
+            margin-top: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+
+
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f6a63f;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+
+    }
+    th {
+        background-color: #f2f2f2;
+        font-family: monospace;
+    }
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Form</h2>
+    <form id="studentForm" action="#" method="post">
+        <div class="form-group">
+            <label for="roll_number">Roll Number:</label>
+            <input type="text" id="roll_number" name="roll_number" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="batch">Batch:</label>
+            <select id="batch" name="batch" required>
+                <option value="">Select Batch</option>
+                <option value="2020">2022</option>
+                <option value="2021">2023</option>
+                <option value="2022">2024</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="section">Section:</label>
+            <input type="text" id="section" name="section" required>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<br><br>
+
+<div class="container">
+    <h1 class="animate__animated animate__fadeInDown">Quiz Application</h1>
+    <form id="quizForm" action="#" method="post">
+        <div class="form-group">
+        <center>    <label for="heading" class="animate__animated animate__fadeInLeft">General Knowledge Quiz</label></center>
+        </div>
+        <div class="form-group">
+            <label for="topic" class="animate__animated animate__fadeInLeft" style="color: green;">World Knowledge</label>
+        </div>
+        <div class="question animate__animated animate__fadeInUp">
+            <p><strong>Question 1:</strong> What is the capital of France?</p>
+            <div class="options">
+                <input type="radio" id="q1_option1" name="q1" value="Paris" required>
+                <label for="q1_option1" class="animate__animated animate__fadeInRight">Paris</label>
+                <input type="radio" id="q1_option2" name="q1" value="London">
+                <label for="q1_option2" class="animate__animated animate__fadeInRight">London</label>
+                <input type="radio" id="q1_option3" name="q1" value="Berlin">
+                <label for="q1_option3" class="animate__animated animate__fadeInRight">Berlin</label>
+                <input type="radio" id="q1_option4" name="q1" value="Madrid">
+                <label for="q1_option4" class="animate__animated animate__fadeInRight">Madrid</label>
+            </div>
+        </div>
+        <div class="question animate__animated animate__fadeInUp">
+            <p><strong>Question 2:</strong> What is the largest ocean on Earth?</p>
+            <div class="options">
+                <input type="radio" id="q2_option1" name="q2" value="Atlantic" required>
+                <label for="q2_option1" class="animate__animated animate__fadeInRight">Atlantic</label>
+                <input type="radio" id="q2_option2" name="q2" value="Pacific">
+                <label for="q2_option2" class="animate__animated animate__fadeInRight">Pacific</label>
+                <input type="radio" id="q2_option3" name="q2" value="Indian">
+                <label for="q2_option3" class="animate__animated animate__fadeInRight">Indian</label>
+                <input type="radio" id="q2_option4" name="q2" value="Arctic">
+                <label for="q2_option4" class="animate__animated animate__fadeInRight">Arctic</label>
+            </div>
+        </div>
+        <div class="question animate__animated animate__fadeInUp">
+            <p><strong>Question 3:</strong> What is the chemical symbol for gold?</p>
+            <div class="options">
+                <input type="radio" id="q3_option1" name="q3" value="Au" required>
+                <label for="q3_option1" class="animate__animated animate__fadeInRight">Au</label>
+                <input type="radio" id="q3_option2" name="q3" value="Ag">
+                <label for="q3_option2" class="animate__animated animate__fadeInRight">Ag</label>
+                <input type="radio" id="q3_option3" name="q3" value="Fe">
+                <label for="q3_option3" class="animate__animated animate__fadeInRight">Fe</label>
+                <input type="radio" id="q3_option4" name="q3" value="Cu">
+                <label for="q3_option4" class="animate__animated animate__fadeInRight">Cu</label>
+            </div>
+        </div>
+        <div class="question animate__animated animate__fadeInUp">
+            <p><strong>Question 4:</strong> Who wrote the famous play "Romeo and Juliet"?</p>
+            <div class="options">
+                <input type="radio" id="q4_option1" name="q4" value="William Shakespeare" required>
+                <label for="q4_option1" class="animate__animated animate__fadeInRight">William Shakespeare</label>
+                <input type="radio" id="q4_option2" name="q4" value="Jane Austen">
+                <label for="q4_option2" class="animate__animated animate__fadeInRight">Jane Austen</label>
+                <input type="radio" id="q4_option3" name="q4" value="Charles Dickens">
+                <label for="q4_option3" class="animate__animated animate__fadeInRight">Charles Dickens</label>
+                <input type="radio" id="q4_option4" name="q4" value="Mark Twain">
+                <label for="q4_option4" class="animate__animated animate__fadeInRight">Mark Twain</label>
+            </div>
+        </div>
+        <div class="question animate__animated animate__fadeInUp">
+            <p><strong>Question 5:</strong> What is the closest planet to the Sun?</p>
+            <div class="options">
+                <input type="radio" id="q5_option1" name="q5" value="Mercury" required>
+                <label for="q5_option1" class="animate__animated animate__fadeInRight">Mercury</label>
+                <input type="radio" id="q5_option2" name="q5" value="Venus">
+                <label for="q5_option2" class="animate__animated animate__fadeInRight">Venus</label>
+                <input type="radio" id="q5_option3" name="q5" value="Mars">
+                <label for="q5_option3" class="animate__animated animate__fadeInRight">Mars</label>
+                <input type="radio" id="q5_option4" name="q5" value="Jupiter">
+                <label for="q5_option4" class="animate__animated animate__fadeInRight">Jupiter</label>
+            </div>
+        </div>
+        <input type="submit" value="Submit" class="animate__animated animate__zoomIn">
+    </form>
+    <div id="result" class="result"></div>
+</div>
+
+
+
+
+<div class="container">
+    <h1>Quiz Results</h1>
+    <table>
+        <tr>
+            <th>Student Name:</th>
+            <td style="color: green;">Muhammad Farhan</td>
+        </tr>
+        <tr>
+            <th>Quiz Topic:</th>
+            <td>General Knowledge</td>
+        </tr>
+        <tr>
+            <th>Attempted Answer:</th>
+            <td>5</td>
+        </tr>
+        <tr>
+            <th>Correct Answer:</th>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th>Total Marks:</th>
+            <td>6/10</td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("studentForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            if (validateForm()) {
+                const formData = {
+                    roll_number: document.getElementById("roll_number").value,
+                    name: document.getElementById("name").value,
+                    batch: document.getElementById("batch").value,
+                    section: document.getElementById("section").value
+                };
+                storeFormData(formData);
+                form.reset();
+                alert("Student details have been stored successfully.");
+            }
+        });
+
+        function validateForm() {
+            const rollNumber = document.getElementById("roll_number").value;
+            const name = document.getElementById("name").value;
+            const batch = document.getElementById("batch").value;
+            const section = document.getElementById("section").value;
+
+            if (!rollNumber || !name || !batch || !section) {
+                alert("Please fill out all fields.");
+                return false;
+            }
+            return true;
+        }
+
+        function storeFormData(formData) {
+            const students = JSON.parse(sessionStorage.getItem("students")) || [];
+            students.push(formData);
+            sessionStorage.setItem("students", JSON.stringify(students));
+        }
+    });
+
+    // 2nd //
+    document.addEventListener("DOMContentLoaded", function() {
+        const quizForm = document.getElementById("quizForm");
+        const resultDiv = document.getElementById("result");
+
+        quizForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const totalQuestions = 5;
+            let totalMarks = 0;
+
+            const correctAnswers = ["Paris", "Pacific", "Au", "William Shakespeare", "Mercury"];
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedAnswer = document.querySelector(`input[name=q${i}]:checked`);
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswers[i - 1]) {
+                        totalMarks++;
+                    }
+                }
+            }
+
+            resultDiv.innerHTML = `<p>Your total marks: ${totalMarks} out of ${totalQuestions}</p>`;
+
+            sessionStorage.setItem("totalMarks", totalMarks);
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
